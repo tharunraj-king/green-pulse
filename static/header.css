@@ -1,0 +1,132 @@
+.site-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hamburger {
+    display: block;
+    /* force visible */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.main-nav {
+    display: none;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    z-index: 1;
+    width: 200px;
+    background-color: #1f2937;
+}
+
+.main-nav ul {
+    list-style: none;
+    /* Removes bullet points */
+    padding: 0;
+    /* Removes default padding */
+    margin: 0;
+    /* Removes default margin */
+}
+
+.main-nav a {
+    text-decoration: none;
+    /* Remove underline */
+    cursor: pointer;
+    /* Pointer cursor for clickable links */
+    color: #fff;
+    /* Text color */
+    padding: 1rem 1.5rem;
+    /* Add padding to make the area larger */
+    display: block;
+    /* Make the entire area clickable */
+    border-radius: 5px;
+    /* Optional: Add rounded corners */
+    text-align: center;
+    /* Center-align the text */
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.main-nav a:hover {
+    text-decoration: None;
+    /* Optional: Add underline on hover */
+    background-color: #4CAF50;
+    /* Optional: Change color on hover */
+}
+
+.main-nav.open {
+    display: block;
+    /* Show when 'open' class is added */
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: left;
+}
+
+/* Default (light mode) */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Dark mode override */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+
+        color: #f0f0f0;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+}
+
+/* Reset margin and padding for the body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the header spans the full width */
+.site-header {
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}

@@ -1,0 +1,91 @@
+/* static/style.css */
+
+
+.card-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-info {
+  text-align: center;
+  min-width: 100px;
+}
+
+.stat-head {
+  font-weight: bold;
+  min-width: 100px;
+  font-size: 1.5rem;
+}
+
+.stat-header {
+  font-weight: bold;
+  min-width: 100px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.stats {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4CAF50;
+  text-align: left;
+
+}
+
+canvas {
+  max-width: 92%;
+  display: block;
+
+}
+
+.container {
+  width: 100%;
+  /* Ensure the parent container spans the full width */
+  max-width: none;
+  /* Remove any max-width restrictions */
+  padding: 0;
+  /* Remove padding if necessary */
+  margin: 0;
+  /* Remove margin if necessary */
+}
+
+.chartBox {
+  display: flex;
+  /* Use Flexbox to align items side by side */
+  justify-content: space-around;
+  /* Add space between charts */
+  align-items: center;
+  /* Align charts vertically */
+  flex-wrap: wrap;
+  /* Wrap to the next line if space is insufficient */
+  gap: 10px;
+  /* Add spacing between charts */
+}
+
+.chart {
+  flex: 1;
+  /* Allow charts to grow/shrink equally */
+  max-width: 500px;
+  /* Optional: Set a max width for each chart */
+  text-align: center;
+  /* Center align the canvas */
+}
+
+.sideChart {
+  flex: 1;
+  /* Allow charts to grow/shrink equally */
+  max-width: 60%;
+  /* Optional: Set a max width for each chart */
+  text-align: center;
+  /* Center align the canvas */
+}

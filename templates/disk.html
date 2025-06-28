@@ -1,0 +1,60 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Linux Dashboard</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Annotation Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+
+    <script>
+        Chart.register(window['chartjs-plugin-annotation']);
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+          <!-- Hamburger comes before title -->
+          <button class="hamburger" id="menuToggle">&#9776;</button>
+          <h1 class="logo">System Dashboard</h1>
+    
+          <nav class="main-nav" id="mainNav">
+            <ul>
+              <li><a href="/cores">CPU core</a></li>
+              <li><a href="/disk">Disk Info</a></li>
+              <li><a href="/">Back</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <main>
+        <section>
+            <h2>Disk I/O</h2>
+            <div class="chartBox">
+                <div class="sideChart">
+                    <canvas id="ReadSpeedChart" width="500" height="250"></canvas>
+                </div>
+                <div class="sideChart">
+                    <canvas id="WriteSpeedChart" width="500" height="250"></canvas>
+                </div>
+            </div>
+            <section>
+                <h2>Disk Usage</h2>
+                <br>
+                <table>
+
+                </table>
+            </section>
+    </main>
+    <script type="module" src="{{ url_for('static', filename='charts_creation.js') }}"></script>c
+    <script type="module" src="{{ url_for('static', filename='disk.js') }}"></script>
+</body>
+
+</html>

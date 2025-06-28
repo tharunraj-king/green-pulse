@@ -1,0 +1,159 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Linux Dashboard</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Annotation Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+
+  <script>
+    Chart.register(window['chartjs-plugin-annotation']);
+  </script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+</head>
+
+
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <!-- Hamburger comes before title -->
+      <button class="hamburger" id="menuToggle">&#9776;</button>
+      <h1 class="logo">System Dashboard</h1>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="/cores">CPU core</a></li>
+          <li><a href="/disk">Disk Info</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="chartBox">
+        <div class="chart">
+          <canvas id="cpuGaugeChart" width="500" height="250"></canvas>
+        </div>
+        <div class="chart">
+          <canvas id="memoryGaugeChart" width="500" height="250"></canvas>
+        </div>
+        <div class="stat-head">
+          <div class="stats-header">Host Details:</div>
+          <div>&nbsp;</div>
+          <div class="stats" id="hostName"></div>
+          <br>
+          <div class="stats" id="ips"></div>
+          <br>
+          <div class="stats" id="noOfCpus"></div>
+          <br>
+          <div class="stats" id="cpuModel"></div>
+          <br>
+          <div class="stats" id="cpuRAM"></div>
+          <br>
+          <div class="stats" id="System"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>CPU Usage</h2>
+        <div class="card-body">
+          <div class="stat-info">
+            <div class="stat-value" id="cpuValue"></div>
+            <div class="stat-label">Current Usage %</div>
+            <div class="stat-value" id="cpuMaxValue"></div>
+            <div class="stat-label">Max Usage %</div>
+            <div class="stat-value" id="cpuMinValue"></div>
+            <div class="stat-label">Min Usage %</div>
+          </div>
+          <canvas id="cpuChart" width="500" height="50"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Memory Usage</h2>
+        <div class="card-body">
+          <canvas id="memoryChart" width="500" height="50"></canvas>
+          <div class="stat-info">
+            <div class="stat-value" id="memoryValue"></div>
+            <div class="stat-label">Current Usage %</div>
+            <div class="stat-value" id="memoryMaxValue"></div>
+            <div class="stat-label">Max Usage %</div>
+            <div class="stat-value" id="memoryMinValue"></div>
+            <div class="stat-label">Min Usage %</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Packets Sent</h2>
+        <div class="card-body">
+          <div class="stat-info">
+            <div class="stat-value" id="PacketsSentValue"></div>
+            <div class="stat-label">Current Usage</div>
+            <div class="stat-value" id="PacketsSentMaxValue"></div>
+            <div class="stat-label">Max Usage</div>
+            <div class="stat-value" id="PacketsSentMinValue"></div>
+            <div class="stat-label">Min Usage</div>
+          </div>
+          <canvas id="netPacketsSentChart" width="500" height="50"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Packets Received</h2>
+        <div class="card-body">
+          <canvas id="netPacketsReceivedChart" width="500" height="50"></canvas>
+          <div class="stat-info">
+            <div class="stat-value" id="PacketsReceivedValue"></div>
+            <div class="stat-label">Current Usage</div>
+            <div class="stat-value" id="PacketsReceivedMaxValue"></div>
+            <div class="stat-label">Max Usage</div>
+            <div class="stat-value" id="PacketsReceivedMinValue"></div>
+            <div class="stat-label">Min Usage</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>Disk Usage</h2>
+        <div class="card-body">
+          <div class="stat-info">
+            <div class="stat-value" id="diskValue"></div>
+            <div class="stat-label">Current Usage</div>
+            <div class="stat-value" id="diskMaxValue"></div>
+            <div class="stat-label">Max Usage</div>
+            <div class="stat-value" id="diskMinValue"></div>
+            <div class="stat-label">Min Usage</div>
+          </div>
+          <canvas id="diskChart" width="500" height="50"></canvas>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="{{ url_for('static', filename='charts_creation.js') }}"></script>c
+  <script type="module" src="{{ url_for('static', filename='dashboard.js') }}"></script>
+  
+</body>
+
+</html>
