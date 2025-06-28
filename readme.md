@@ -71,6 +71,31 @@
 
 ---
 
+# Screenshots and GIFs
+
+Here are some visuals to showcase the functionality of **Green Pulse**:
+
+## **📊 Dashboard Overview**
+![Dashboard Overview](https://github.com/user-attachments/assets/7a68b08e-6268-4aab-8eff-c99f9f4b4fe6)
+![Screenshot from 2025-06-28 18-29-13](https://github.com/user-attachments/assets/3bb03aeb-5db1-462a-9b24-3908204a68d9)
+
+*The main dashboard showing real-time CPU, memory, and disk usage.*
+
+---
+
+## **🖥️ CPU Core Usage**
+![CPU Core Usage]![Screenshot from 2025-06-28 18-30-11](https://github.com/user-attachments/assets/bd1b29d1-57ea-411d-9758-e5cb4a9bc150)
+
+*Multi-line chart displaying per-core CPU usage.*
+
+---
+
+## **📀 Disk I/O Monitoring**
+![Disk I/O Monitoring](https://github.com/user-attachments/assets/4b38c291-7b95-4220-a5d0-750c5b18aabd)
+*Real-time disk read/write speed charts.*
+
+---
+
 ## **🧑‍🤝‍🧑 Contributing**
 
 Contributions are welcome! Please follow these steps:
@@ -83,11 +108,7 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## **📞 Contact**
 
-For questions or feedback, please open an issue on GitHub or contact the maintainer.
-
----
 
 ## **Acknowledgements**
 
