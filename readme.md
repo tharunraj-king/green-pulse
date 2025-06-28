@@ -84,7 +84,7 @@ Here are some visuals to showcase the functionality of **Green Pulse**:
 ---
 
 ## **🖥️ CPU Core Usage**
-![CPU Core Usage]![Screenshot from 2025-06-28 18-30-11](https://github.com/user-attachments/assets/bd1b29d1-57ea-411d-9758-e5cb4a9bc150)
+![CPU Core Usage](https://github.com/user-attachments/assets/bd1b29d1-57ea-411d-9758-e5cb4a9bc150)
 
 *Multi-line chart displaying per-core CPU usage.*
 
